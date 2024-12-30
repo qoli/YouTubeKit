@@ -213,8 +213,6 @@ public class YouTube {
                 return cached
             }
 
-            print("passing through checkAvailability")
-
             let result = try await Task.retry(with: methods) { method in
                 switch method {
                 case .local:
